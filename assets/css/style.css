@@ -312,7 +312,7 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 300px;
 }
 
 .home__data {
@@ -408,8 +408,15 @@ img {
 }
 
 /*==================== ABOUT ====================*/
+.about__container {
+  /* This overrides the more general rule for .about__container only */
+  grid-template-columns: 0.5fr 1fr; /* Image (1st column) takes 0.5 parts, Description (2nd column) takes 1.5 parts */
+  gap: 3rem; /* Optional: Adds space between the image and description */
+  align-items: center; /* Optional: Vertically aligns content in the grid */
+}
+
 .about__img {
-  width: 200px;
+  width: 150px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
@@ -445,6 +452,167 @@ img {
 .about__buttons {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.about__button-group {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Centers items horizontally */
+  gap: 1.5rem; /* Optional: Adds space between the two buttons */
+  margin-top: var(--mb-2-5); /* Optional: Add some space above the buttons */
+}
+
+/*==================== TIMELINE ====================*/
+.about__timeline-section {
+    margin-top: 5rem; /* Space from content above */
+    padding: 2rem 0; /* Vertical padding */
+    position: relative; /* Needed for potential absolute positioning of elements within */
+}
+
+.about__timeline-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: var(--h2-font-size); /* Ensure consistent title size */
+    color: var(--title-color);
+}
+
+.about__timeline-container {
+    position: relative;
+    width: 90%; /* Adjust width as needed */
+    max-width: 1000px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding-top: 60px; /* Space for images above the line */
+    padding-bottom: 0px; /* Space for text below the line */
+}
+
+.timeline__line {
+    position: absolute;
+    top: 50%; /* Center vertically in the container */
+    left: 0;
+    right: 0;
+    height: 4px; /* Thickness of the line */
+    background-color: var(--first-color-lighter); /* Color of the line */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    z-index: 1; /* Ensure line is behind events */
+    border-radius: 2px;
+}
+
+.timeline__events {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    position: relative; /* Ensure events are above the line */
+    z-index: 2; /* Ensure events are above the line */
+}
+
+.timeline__event {
+    flex: 1; /* Distribute space equally */
+    text-align: center;
+    position: relative;
+    padding: 0 10px; /* Padding for text/image not to touch edges */
+    display: flex; /* Use flex for image and text alignment */
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline__event::before { /* Dot on the line */
+    content: '';
+    position: absolute;
+    top: -10px; /* Position relative to the event's vertical center */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: var(--first-color); /* Dot color */
+    border: 3px solid var(--container-color); /* Border to match background */
+    border-radius: 50%;
+    z-index: 3; /* Ensure dot is on top */
+}
+
+.timeline__img {
+    width: 80px; /* Size of the image */
+    height: 80px; /* Make it square */
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover; /* Ensure image covers the circle without distortion */
+    border: 4px solid var(--first-color); /* Border around image */
+    margin-bottom: 1rem; /* Space between image and text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.timeline__img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.timeline__text {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    line-height: 1.4;
+    max-width: 120px; /* Limit text width to prevent wrapping too much */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .about__timeline-container {
+        flex-direction: column; /* Stack events vertically on small screens */
+        align-items: flex-start;
+        padding-top: 0;
+        padding-left: 20px; /* Space for vertical line */
+        width: 100%;
+    }
+
+    .timeline__line {
+        width: 4px; /* Vertical line */
+        height: 100%;
+        top: 0;
+        left: 20px; /* Position on the left */
+        transform: none;
+    }
+
+    .timeline__events {
+        flex-direction: column; /* Stack events */
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .timeline__event {
+        width: 100%;
+        padding: 20px 0 20px 40px; /* Adjust padding for vertical layout */
+        text-align: left;
+        flex-direction: row; /* Image and text side-by-side */
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .timeline__event::before {
+        left: 20px; /* Align dot with vertical line */
+        top: 20px;
+        transform: translate(-50%, -50%);
+    }
+
+    .timeline__img {
+        width: 80px;
+        height: 80px;
+        top: 5px;
+        border-radius: 50%;
+        margin-top: 100px;
+        object-fit: cover;
+        border: 4px solid var(--first-color);
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        background-color: white;
+    }
+
+    .timeline__img--smaller {
+        width: 5px;   /* Adjust this value to your desired smaller width */
+        height: 5px;  /* Adjust this value to your desired smaller height */
+    }
+
+    .timeline__text {
+        max-width: none; /* Remove max-width for full text */
+    }
 }
 
 /*==================== SKILLS ====================*/
@@ -515,48 +683,48 @@ img {
   background-color: var(--first-color);
 }
 
-.skills__html {
-  width: 90%;
+.skills__pytorch {
+  width: 80%;
 }
 
-.skills__css {
-  width: 70%;
+.skills__ml {
+  width: 80%;
 }
 
-.skills__js {
+.skills__anylogic {
+  width: 95%;
+}
+
+.skills__stats {
+  width: 85%;
+}
+
+.skills__c {
   width: 60%;
 }
 
-.skills__react {
-  width: 40%;
+.skills__java {
+  width: 85%;
 }
 
-.skills__php {
-  width: 90%;
-}
-
-.skills__mysql {
-  width: 72%;
-}
-
-.skills__node {
-  width: 58%;
+.skills__git {
+  width: 80%;
 }
 
 .skills__python {
-  width: 94%;
+  width: 90%;
 }
 
-.skills__blender {
-  width: 50%;
+.skills__or {
+  width: 85%;
 }
 
-.skills__photoshop {
-  width: 42%;
+.skills__warehouse {
+  width: 80%;
 }
 
-.skills__adobeillustrator {
-  width: 62%;
+.skills__pm {
+  width: 70%;
 }
 
 .skills__close .skills__list {
@@ -1034,7 +1202,7 @@ footer .footer__social a:hover {
     justify-self: center;
   }
 
-  .about__container,
+  /*.about__container,*/
   .skills__container,
   .portfolio__content,
   .project__container,
