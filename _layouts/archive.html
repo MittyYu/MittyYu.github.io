@@ -1,0 +1,46 @@
+---
+layout: default # Uses your main site layout for consistency
+title: Archive # Default title, will be overridden by Jekyll for specific tags/categories
+---
+
+<main class="main">
+    <section class="archive-list-section section">
+        <div class="container">
+            <h1 class="archive-list__title section__title">
+                {% if page.collection == 'tags' %}
+                    Tag: {{ page.name }}
+                {% elsif page.collection == 'categories' %}
+                    Category: {{ page.name }}
+                {% else %}
+                    Archive
+                {% endif %}
+            </h1>
+            <span class="archive-list__subtitle section__subtitle">Posts related to {{ page.name }}</span>
+
+            <div class="blog-posts-container grid">
+                {% for post in page.posts %} <article class="blog-post-card" data-aos="fade-up">
+                    <h3 class="blog-post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    <p class="blog-post-meta">
+                        <i class="uil uil-calendar-alt"></i> {{ post.date | date: "%B %d, %Y" }}
+                        {% if post.author %}
+                        <span class="blog-post-author"> | <i class="uil uil-user"></i> {{ post.author }}</span>
+                        {% endif %}
+                    </p>
+                    <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="button button--flex button--small blog-post-button">
+                        Read More <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                </article>
+                {% endfor %}
+            </div>
+
+            {% unless page.posts.size > 0 %}
+            <p class="no-posts-message">No posts found for this archive.</p>
+            {% endunless %}
+
+            <a href="{{ '/blog/' | relative_url }}" class="button button--flex button--small blog-back-button">
+                <i class="uil uil-arrow-left button__icon"></i> Back to Blog
+            </a>
+        </div>
+    </section>
+</main>

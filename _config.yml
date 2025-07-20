@@ -1,0 +1,63 @@
+# Site settings
+# These are used in your layouts with {{ site.title }}, {{ site.description }}, etc.
+title: "Mitty Yu's Portfolio & Blog"
+description: "High-level experience in Data Science and Industrial Engineering. My personal portfolio and blog."
+author: "Mitty Yu"
+email: "mittyu@alumni.stanford.edu" # Optional, but good for contact info if used in layouts
+
+# Base URL for the site.
+# This is crucial for GitHub Pages. It works with Jekyll's 'relative_url' filter.
+# IMPORTANT: For your MittyYu.github.io repository (which is a User/Organization Page),
+# the baseurl should be an empty string. This tells Jekyll your site is at the root of the domain.
+# If this were a project page (e.g., MittyYu.github.io/my-project/), you'd put baseurl: "/my-project"
+baseurl: ""
+
+# Permalink structure for blog posts
+# This defines how your blog post URLs will look.
+# Options:
+#   /:categories/:year/:month/:day/:title.html  (Jekyll's default, very long)
+#   /blog/:year/:month/:day/:title.html         (Common, organized by date)
+#   /blog/:title/                               (Cleanest for SEO and readability, highly recommended)
+permalink: /blog/:title/
+
+# Default front matter for content
+# This is a great time-saver! It automatically applies certain front matter
+# variables to files within specified scopes.
+defaults:
+  - scope:
+      path: "_posts" # Applies to all Markdown files in the _posts directory
+    values:
+      layout: post # Automatically sets 'layout: post' for every blog post
+
+plugins:
+  - jekyll-archives # Make sure this line is present and not commented out
+
+jekyll-archives:
+  enabled: []
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+
+# Exclude from processing
+# Files and directories listed here will NOT be processed by Jekyll.
+# This is useful for development files, configuration, or temporary files.
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - LICENSE.md
+  - .gitignore
+  - .travis.yml
+  - .jekyll-cache
+  - vendor
+
+# Build settings
+markdown: kramdown
+theme: null

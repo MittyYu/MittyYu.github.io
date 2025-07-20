@@ -1,0 +1,31 @@
+---
+layout: default # This tells Jekyll to use the _layouts/default.html template
+title: My Blog Posts # This will set the <title> tag for this page
+---
+
+<section class="blog-list-section section">
+    <h2 class="section__title">My Blog</h2>
+    <span class="section__subtitle">Latest Articles & Insights</span>
+
+    <div class="blog-posts-container container grid">
+        {% for post in site.posts %}
+        <article class="blog-post-card">
+            <h3 class="blog-post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="blog-post-meta">
+                <i class="uil uil-calendar-alt"></i> {{ post.date | date: "%B %d, %Y" }}
+                {% if post.author %}
+                <span class="blog-post-author"> | <i class="uil uil-user"></i> {{ post.author }}</span>
+                {% endif %}
+            </p>
+            <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <a href="{{ post.url | relative_url }}" class="button button--flex button--small blog-post-button">
+                Read More <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+
+    {% unless site.posts.size > 0 %}
+    <p class="no-posts-message">No blog posts yet. Check back soon!</p>
+    {% endunless %}
+</section>

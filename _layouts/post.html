@@ -1,0 +1,39 @@
+---
+layout: default # This tells Jekyll to use your _layouts/default.html as its base
+---
+
+<main class="main">
+    <section class="blog-post-detail section">
+        <div class="container">
+            <h1 class="blog-post-detail__title section__title">{{ page.title }}</h1>
+            <p class="blog-post-detail__meta section__subtitle">
+                <i class="uil uil-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
+                {% if page.author %}
+                <span class="blog-post-detail__author"> | <i class="uil uil-user"></i> {{ page.author }}</span>
+                {% endif %}
+            </p>
+
+            <!-- <div class="blog-post-taxonomy">
+                {% if page.categories %}
+                <div class="blog-post-categories">
+                    <i class="uil uil-folder"></i> Categories:
+                    {% for category in page.categories %}
+                    <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}/" class="blog-taxonomy-link">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if page.tags %}
+                <div class="blog-post-tags">
+                    <i class="uil uil-tag-alt"></i> Tags:
+                    {% for tag in page.tags %}
+                    <a href="{{ '/tags/' | relative_url }}{{ tag | slugify }}/" class="blog-taxonomy-link">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div> -->
+            <div class="blog-post-content">
+                {{ content }} </div>
+        </div>
+    </section>
+</main>
