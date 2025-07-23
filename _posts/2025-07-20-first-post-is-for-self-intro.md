@@ -1,6 +1,6 @@
 ---
 layout: post  # Or whatever layout your blog posts will use
-title: "First blog post is for self intro"
+title: "First blog is for self intro"
 author: "Mitty Yu"
 date: 2025-07-20 10:00:00 -0700 # Include timezone (PDT is -0700 in summer)
 categories: myself # Optional categories
@@ -9,7 +9,7 @@ tags: personal, journey
 
 Hello there, and welcome to my very first blog post!
 
-I'm Mitty, and I'm genuinely thrilled to launch this space as a deeper dive into my professional journey, my passion for technology, and the insights I gather along the way. Consider this your "Hello World!" introduction to the person behind the portfolio.
+I'm Mitty, and I'm thrilled to launch this space as a deeper dive into my professional journey, my passion for technology, and the insights I gather along the way. Consider this your "Hello World!" introduction to the person behind the portfolio.
 
 ---
 
@@ -23,14 +23,15 @@ My path began in **Taiwan**, where an early curiosity for robotics quickly evolv
 
 Driven by a desire to deepen my expertise, I then journeyed to **Stanford University's Institute for Computational and Mathematical Engineering (ICME)**. This program allowed me to immerse myself in the mathematical foundations and practical applications of applied data science, sharpening my analytical and development skills considerably.
 
-Today, I'm a Data Scientist at **Applied Materials**, where I bring this unique blend of operational foresight and technical execution to life. My work involves driving innovation in warehouse operations – from developing sophisticated digital twin simulations to implementing computer vision solutions that deliver tangible efficiency gains. It's incredibly rewarding to see the real-world impact of data and algorithms.
+Today, I'm an Industrial engineer at **Applied Materials**, where I bring this unique blend of operational foresight and technical execution to life. My work involves driving innovation in warehouse operations – from developing sophisticated digital twin simulations to implementing computer vision solutions that deliver tangible efficiency gains. It's incredibly rewarding to see the real-world impact of data and algorithms.
 
 
 ## Beyond the Algorithms
 
 While my professional life revolves around data and engineering, my curiosity doesn't stop there. In my free time, you'll often find me:
 
-* **Discovering new tech:** Always exploring the latest tools and trends, like GPTs, MCP, and AI agents.
+
+* **Discovering new tech:** Exploring the latest tools and trends, like GPTs, MCP, and AI agents.
 * **Developing small passion projects:** Bringing ideas to life is one of my favorite things to do! I love seeing my small ideas become a reality.
 * **Enjoying art:** Finding inspiration and perspective in various creative expressions.
 * And, most importantly, **figuring out my life:** A continuous journey of learning and self-discovery.
