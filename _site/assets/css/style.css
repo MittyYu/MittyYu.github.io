@@ -523,19 +523,19 @@ img {
     align-items: center;
 }
 
-.timeline__event::before { /* Dot on the line */
+/* .timeline__event::before { 
     content: '';
     position: absolute;
-    top: -10px; /* Position relative to the event's vertical center */
+    top: -10px; 
     left: 50%;
     transform: translateX(-50%);
     width: 16px;
     height: 16px;
-    background-color: var(--first-color); /* Dot color */
-    border: 3px solid var(--container-color); /* Border to match background */
+    background-color: var(--first-color); 
+    border: 3px solid var(--container-color);
     border-radius: 50%;
-    z-index: 3; /* Ensure dot is on top */
-}
+    z-index: 3; 
+} */
 
 .timeline__img {
     width: 80px; /* Size of the image */
@@ -592,11 +592,11 @@ img {
         justify-content: flex-start;
     }
 
-    .timeline__event::before {
-        left: 20px; /* Align dot with vertical line */
+    /* .timeline__event::before {
+        left: 20px; 
         top: 20px;
         transform: translate(-50%, -50%);
-    }
+    } */
 
     .timeline__img {
         width: 80px;
@@ -613,8 +613,8 @@ img {
     }
 
     .timeline__img--smaller {
-        width: 5px;   /* Adjust this value to your desired smaller width */
-        height: 5px;  /* Adjust this value to your desired smaller height */
+        width: 10px;   /* Adjust this value to your desired smaller width */
+        height: 10px;  /* Adjust this value to your desired smaller height */
     }
 
     .timeline__text {
@@ -659,11 +659,11 @@ img {
         justify-content: flex-start;
     }
     
-    .timeline__event::before {
-        left: 20px; /* Align dot with vertical line */
+    /* .timeline__event::before {
+        left: 20px; 
         top: 50%;
-        transform: translate(-50%, -50%); /* Center dot vertically on the line */
-    }
+        transform: translate(-50%, -50%); 
+    } */
 
     .timeline__img {
         width: 80px; /* Smaller images on mobile for compactness */
