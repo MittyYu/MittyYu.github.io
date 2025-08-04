@@ -622,6 +622,64 @@ img {
     }
 }
 
+/*==================== TIMELINE - MOBILE RESPONSIVE (VERTICAL) ====================*/
+@media screen and (max-width: 768px) {
+    .about__timeline-container {
+        padding: 0 0 20px 20px; /* Space for vertical line on the left */
+        width: 100%;
+        max-width: 100%; /* Ensure it's not restricted by max-width */
+    }
+
+    .about__timeline-title {
+        text-align: center; /* Align title left on mobile */
+        margin-left: 10px; /* Add a little margin for spacing */
+    }
+
+    .timeline__line {
+        height: 100%; /* Make line vertical */
+        width: 4px;
+        top: 0;
+        left: 37px; /* Position line on the left */
+        transform: none; /* Remove previous transform */
+    }
+
+    .timeline__events {
+        flex-direction: column; /* Stack events vertically */
+        align-items: flex-start;
+        gap: 0.5rem; /* Space between each vertical event */
+        padding-top: 0;
+    }
+
+    .timeline__event {
+        width: 100%;
+        padding: 0 0 0 20px; /* Adjust padding to make space for line and dot */
+        text-align: left;
+        flex-direction: row; /* Image and text side-by-side */
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .timeline__event::before {
+        left: 20px; /* Align dot with vertical line */
+        top: 50%;
+        transform: translate(-50%, -50%); /* Center dot vertically on the line */
+    }
+
+    .timeline__img {
+        width: 80px; /* Smaller images on mobile for compactness */
+        height: 80px;
+        margin-right: 1.5rem; /* Space between image and text */
+        margin-left: 1rem;
+        margin-bottom: 0;
+        transform: translateY(-50px);
+    }
+
+    .timeline__text {
+        max-width: none;
+    }
+}
+
+
 /*==================== SKILLS ====================*/
 .skills__container {
   row-gap: 0;
