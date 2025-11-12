@@ -61,3 +61,8 @@ exclude:
 # Build settings
 markdown: kramdown
 theme: null
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/

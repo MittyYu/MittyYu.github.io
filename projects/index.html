@@ -1,0 +1,21 @@
+---
+layout: default
+title: Mitty Yu - Projects
+---
+
+<section class="portfolio section">
+    <h2 class="section__title">Projects</h2>
+    <span class="section__subtitle">A detailed look at my work</span>
+
+    <div class="portfolio__container container grid">
+        {% for project in site.projects %}
+            <a href="{{ project.url | relative_url }}" class="portfolio__content grid">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="portfolio__img">
+                <div class="portfolio__data">
+                    <h3 class="portfolio__title">{{ project.title }}</h3>
+                    <p class="portfolio__description">{{ project.description }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</section>
