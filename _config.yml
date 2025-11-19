@@ -57,6 +57,7 @@ exclude:
   - .travis.yml
   - .jekyll-cache
   - vendor
+  - _drafts
 
 # Build settings
 markdown: kramdown
