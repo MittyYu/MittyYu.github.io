@@ -24,6 +24,8 @@ title: My Blog Posts # This will set the <title> tag for this page
         </article>
         {% endfor %}
     </div>
+    <!-- Medium Posts will be appended here by JS -->
+    <script src="{{ '/assets/js/medium-feed.js' | relative_url }}"></script>
 
     {% unless site.posts.size > 0 %}
     <p class="no-posts-message">No blog posts yet. Check back soon!</p>
