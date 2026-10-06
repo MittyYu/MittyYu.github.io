@@ -15,7 +15,7 @@ I'm Mitty, and I'm thrilled to launch this space as a deeper dive into my profes
 
 ## Bridging Engineering Strategy and Data Innovation
 
-My professional identity sits at a fascinating intersection: I'm an **Industrial Engineer** with a powerful knack for **software development and data science**. You could say I'm an IE with a coding superpower, constantly seeking to optimize, innovate, and solve complex problems from a fresh, data-driven perspective.
+My professional identity sits at a fascinating intersection: I'm a **Data scientist** with a powerful knack for **software development and industrial engineering**. You could say I'm an DS with a IE/Optimization superpower, constantly seeking to optimize, innovate, and solve complex problems from a fresh, data-driven perspective.
 
 ## My Journey So Far
 
@@ -23,7 +23,7 @@ My path began in **Taiwan**, where an early curiosity for robotics quickly evolv
 
 Driven by a desire to deepen my expertise, I then journeyed to **Stanford University's Institute for Computational and Mathematical Engineering (ICME)**. This program allowed me to immerse myself in the mathematical foundations and practical applications of applied data science, sharpening my analytical and development skills considerably.
 
-Today, I'm an Industrial engineer at **Applied Materials**, where I bring this unique blend of operational foresight and technical execution to life. My work involves driving innovation in warehouse operations – from developing sophisticated digital twin simulations to implementing computer vision solutions that deliver tangible efficiency gains. It's incredibly rewarding to see the real-world impact of data and algorithms.
+Today, I'm an engineer at **Applied Materials**, where I bring this unique blend of operational foresight and technical execution to life. My work involves driving innovation in warehouse operations – from developing sophisticated digital twin simulations to implementing computer vision solutions that deliver tangible efficiency gains. It's incredibly rewarding to see the real-world impact of data and algorithms.
 
 
 ## Beyond the Algorithms
